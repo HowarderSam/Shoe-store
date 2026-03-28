@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Cabinet{% endblock %}
+
+{% block content %}
+   <form method="post">
+        <label class="form-label">Phone number</label>
+        <input type="tel" name="phone" class="form-control" required>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+{% if orders %}
+
+<div class="row">
+  {% for i in orders[1] %}
+  <div class="col-4 mb-3 mb-sm-0">
+    <div class="card">
+        <img src="{{i.img}}" height="230">
+      <div class="card-body">
+        <h5 class="card-title">{{i.name}}</h5>
+        <p class="card-text">{{i.desc}}</p>
+        <p class ="card-text">Price: {{i.price}}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endif %}
+
+
+
+
+{% endblock %}
