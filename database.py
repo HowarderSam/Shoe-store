@@ -3,7 +3,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship, sessionmaker
 from sqlalchemy.orm import DeclarativeBase
 
 
-engine = create_engine(f"postgresql+psycopg2://postgres:'Your_username'@localhost:'Your_host'/'Your_Table_nam'e", echo=True)
+engine = create_engine(f"postgresql+psycopg2://postgres:'Your_username'@localhost:'Your_host'/shoe_store", echo=True)
 Session = sessionmaker(bind=engine)
 
 
